@@ -1,0 +1,10 @@
+# pyinstaller
+__pycache__*
+build/*
+dist/*
+*.pyc
+*.spec
+*.exe
+
+# test
+test/*

@@ -1,0 +1,19 @@
+# pyinstaller
+__pycache__*
+build/*
+dist/*
+*.pyc
+*.spec
+*.exe
+
+# useful contents
+cookies.txt
+*.mp3
+lame.exe
+ffmpeg.exe
+MediaInfo.dll
+wget.exe
+zlrc.exe
+
+# test
+test/*

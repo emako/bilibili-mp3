@@ -1,0 +1,15 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: main_test",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "args": [
+                "https://www.bilibili.com/video/BV1kS4y1T7kK?p=3",
+            ],
+            "console": "integratedTerminal"
+        }
+    ]
+}
