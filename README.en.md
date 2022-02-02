@@ -6,12 +6,17 @@ A tools for downloading bilibili songs as mp3.
 > With the outbreak of the virtual avatar of bilibili, excellent cover songs appear frequently.
 > This tool is specially made to quickly capture for MP3 collection.
 
-随着b站的虚拟主播大爆发，优秀翻唱作品频出，特别制作此工具快速抓取为mp3收藏
-
 | Url Prefix                     | Supports |
 | ------------------------------ | -------- |
 | https://www.bilibili.com/audio | ×        |
 | https://www.bilibili.com/video | √        |
+
+## Download
+[![GitHub downloads](https://img.shields.io/github/downloads/emako/bilibili-mp3/total)](https://github.com/emako/bilibili-mp3/releases)
+[![GitHub downloads](https://img.shields.io/github/downloads/emako/bilibili-mp3/latest/total)](https://github.com/emako/bilibili-mp3/releases)
+
+[Download Page](https://github.com/emako/bilibili-mp3/releases)
+
 
 ## Cookies supports
 

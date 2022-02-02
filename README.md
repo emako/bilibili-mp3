@@ -2,7 +2,7 @@
 
 # <img src="src/favicon.png" width = "50" height = "48" alt="" align="left" /> bilibili-mp3
 
-## Intro
+## 简介
 B站歌曲MP3下载工具。
 
 > 随着b站的虚拟主播大爆发，优秀翻唱作品频出。
@@ -12,6 +12,13 @@ B站歌曲MP3下载工具。
 | ------------------------------ | ---- |
 | https://www.bilibili.com/audio | ×    |
 | https://www.bilibili.com/video | √    |
+
+## 下载
+[![GitHub downloads](https://img.shields.io/github/downloads/emako/bilibili-mp3/total)](https://github.com/emako/bilibili-mp3/releases)
+[![GitHub downloads](https://img.shields.io/github/downloads/emako/bilibili-mp3/latest/total)](https://github.com/emako/bilibili-mp3/releases)
+
+[下载页](https://github.com/emako/bilibili-mp3/releases)
+
 
 ## Cookies支持
 
