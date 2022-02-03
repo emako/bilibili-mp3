@@ -1,17 +1,33 @@
-import os, sys, json, datetime
+import os, sys, json, datetime, win32clipboard
 import api, wget, uget
-import osex
+import osex, version
 import mp3, id3
 
+version.print_version()
+
 ## get params
-if len(sys.argv) <= 1:
+if len(sys.argv) == 1:
+    # try parse url from clipboard
+    win32clipboard.OpenClipboard()     
+    data = win32clipboard.GetClipboardData(win32clipboard.CF_UNICODETEXT)     
+    win32clipboard.CloseClipboard() 
+    if data.startswith('http'):
+        url = data
+    else:
+        print('Usage: program <url|bvid>')
+        exit(0)
+elif len(sys.argv) < 1:
     print('Usage: program <url|bvid>')
     exit(0)
-url = sys.argv[1]
+else:
+    url = sys.argv[1]
 bvid = api.get_bvid(url)
 partid = api.get_part_id(url)
+print(url)
+print(bvid)
 if partid != 1:
     bvid = bvid + '_' + str(partid)
+print('partid: ' + str(partid))
 
 ## get json
 use_cache_json = False
@@ -19,8 +35,9 @@ json_uget = {}
 if os.path.exists(bvid + '.json'):
     mtime_json = os.stat(bvid + '.json').st_mtime
     time_now = datetime.datetime.now().timestamp()
-    time_offset = time_now - mtime_json # unit is sec
-    if time_offset <= 1200: # less than 20min
+    time_offset = time_now - mtime_json
+    # less than 20min will redo get json
+    if time_offset <= 1200:
         use_cache_json = True
 if use_cache_json:
     with open(bvid + '.json', 'r', encoding='utf8') as f:

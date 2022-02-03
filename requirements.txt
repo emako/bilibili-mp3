@@ -1,3 +1,4 @@
 pyinstaller
 requests
 eyeD3
+pywin32
