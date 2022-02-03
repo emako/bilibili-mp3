@@ -28,6 +28,12 @@ B站歌曲MP3下载工具。
 
 ## 用法
 
+### 方法1：`自动解析剪贴板`
+
+复制地址，比如复制`https://www.bilibili.com/video/BV1kS4y1T7kK?p=3`，然后双击运行`bilibili-mp3.exe`
+
+### 方法2：`命令行指定`
+
 > bilibili-mp3 <url|bvid>
 
 ```bash
@@ -48,7 +54,7 @@ pip install -r requirements.txt
 
 其他：
 
-wget.exe、MediaInfo.dll、lame.exe、ffmpeg.exe
+wget.exe、mediainfo.dll、lame.exe、ffmpeg.exe、eyed3.exe
 
 ## 友情链接
 

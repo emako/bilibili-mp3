@@ -26,6 +26,12 @@ If you want 4K resolutions, the `cookies.txt` file should be added to the same p
 
 ## Usage
 
+### Method1: `From clipboard`
+
+Copy your url, such as `https://www.bilibili.com/video/BV1kS4y1T7kK?p=3`, and then double click the `bilibili-mp3.exe`.
+
+### Method2: `Command Way`
+
 > Usage: bilibili-mp3 <url|bvid>
 
 ```bash
@@ -43,6 +49,10 @@ Or send a new issuse [here](https://github.com/emako/bilibili-mp3/issues).
 ```bash
 pip install -r requirements.txt
 ```
+
+Others:
+
+wget.exe, mediainfo.dll, lame.exe, ffmpeg.exe, eyed3.exe
 
 ## Friendly link
 
