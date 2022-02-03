@@ -4,6 +4,11 @@ import osex, version
 import mp3, id3
 
 version.print_version()
+if os.path.exists('cookies.txt'):
+    print('cookies file detected.')
+else:
+    print('cookies file not detected.')
+    print("copy the 'cookies.txt' file to the same path when necessary.")
 
 ## get params
 if len(sys.argv) == 1:
