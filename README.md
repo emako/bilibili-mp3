@@ -46,6 +46,10 @@ bilibili-mp3 BV1kS4y1T7kK
 pip install -r requirements.txt
 ```
 
+其他：
+
+wget.exe、MediaInfo.dll、lame.exe、ffmpeg.exe
+
 ## 友情链接
 
 [zlrc](https://github.com/emako/zlrc)是一款自己开发的lrc歌词快速下载工具，它从网易云获得歌词。
