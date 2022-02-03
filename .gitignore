@@ -8,3 +8,5 @@ dist/*
 
 # test
 test/*
+exe/*
+bilibili-mp3*.7z

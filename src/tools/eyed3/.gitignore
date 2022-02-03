@@ -1,0 +1,6 @@
+# eyed3
+__pycache__/*
+build/*
+dist/*
+res/*
+eyed3.exe
