@@ -1,4 +1,4 @@
-import os, sys, json, datetime, win32clipboard
+import os, sys, json, datetime, win32clipboard, subprocess
 import api, wget, uget
 import osex, version
 import mp3, id3
@@ -70,15 +70,16 @@ wget.download(cover_url, '{bvid}.jpg'.format(bvid=bvid))
 mp3.convert(bvid + '.aac', bvid + '.mp3')
 
 ## save cover to mp3
+artist = api.get_owner_name(url)
 id3.save_tag(bvid + '.mp3', {
     'title': stream['title'],
-    'artist': api.get_owner_name(url),
+    'artist': artist,
     'image': bvid + '.jpg',
     'comment': api.get_url(url),
 })
 
 ## rename mp3
-title = json_uget['title'].replace('\\', u'＼') \
+title = (artist + ' - ' + json_uget['title']).replace('\\', u'＼') \
                           .replace('/', u'／') \
                           .replace(':', u'：') \
                           .replace('*', u'＊') \
@@ -90,6 +91,12 @@ title = json_uget['title'].replace('\\', u'＼') \
 osex.remove(title + '.mp3')
 if not osex.rename(bvid + '.mp3', title + '.mp3'):
     exit(0)
+
+## download lrc
+if os.path.exists('zlrc.exe'):
+    cmd = 'zlrc "{path}"'.format(path=title + '.mp3')
+    p = subprocess.Popen(cmd)
+    p.wait()
 
 ## delete cache
 osex.remove(bvid + '.mp3.bat')
