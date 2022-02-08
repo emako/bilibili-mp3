@@ -4,7 +4,10 @@ def get(bvid):
     if bvid.startswith('http'):
         bvid = get_bvid(bvid)
         return get(bvid)
-    res = requests.get('https://api.bilibili.com/x/web-interface/view?bvid=' + bvid).text
+    if bvid.lower().startswith('av'):
+        res = requests.get('https://api.bilibili.com/x/web-interface/view?aid=' + bvid[2:]).text
+    else:
+        res = requests.get('https://api.bilibili.com/x/web-interface/view?bvid=' + bvid).text
     resj = json.loads(res)
     return resj
 
